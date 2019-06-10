@@ -5,7 +5,7 @@ public class NumberToWordConverterTest {
   
     @Test  
     public void testFindMax(){  
-        assertEquals(4,NumberToWordConverter.findMax(new int[]{1,3,4,2}));  
-        assertEquals(-1,Calculation.findMax(new int[]{-12,-1,-3,-4,-2}));  
+        assertEquals(One Hundred and Sixty Five,NumberToWordConverter.numToWord(165));  
+        assertNotEquals(Zero,NumberToWordConverter.numToWord(96));  
     }  
 }  
