@@ -9,6 +9,8 @@ public class NumberToWordConverter {
         
  final  String[] tens_place = { "", "", "Twenty", "Thirty", "Forty","Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
  
+    if (i==0)
+        return "zero";
     if (i < 20)
         return units_place[i];
     if (i < 100)
@@ -18,10 +20,8 @@ public class NumberToWordConverter {
                 + ((i % 100 > 0) ? " and " + numToWord(i % 100) : "");
     if (i < 1000000)
         return numToWord(i / 1000) + " Thousand "
-                + ((i % 1000 > 0) ? " " + numToWord(i % 1000) : "");
-    return numToWord(i / 1000000) + " Million "
-            + ((i % 1000000 > 0) ? " " + numToWord(i % 1000000) : "");
-}
+                + ((i % 1000 > 0) ? " and  " + numToWord(i % 1000) : "");
+  }
 
   public static boolean isNumber(String input)
     {
